@@ -71,6 +71,90 @@ hr {
 }
 
 /* header end */
+.skill {
+    background-color: transparent;
+    width: 90%;
+    /* padding: 20px; */
+}
+.skill:first-child li{
+    margin-top: 0;
+}
+
+.skill li {
+    margin: 50px 0;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+}
+
+.skill li::before {
+    content: '';
+    position: absolute;
+    background-color: beige;
+    width: 100%;
+    height: 20px;
+    top: calc(100% + 5px);
+    left: 0;
+    border-radius: 1000px;
+}
+
+.skill li::after {
+    content: '';
+    position: absolute;
+    background-color: green;
+    width: 0;
+    height: 20px;
+    top: calc(100% + 5px);
+    left: 0;
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    /* animation-iteration-count: 3; */
+    animation-direction: forwards;
+    animation-fill-mode: forwards;
+}
+
+.skill li.html::after {
+    animation-name: html;
+}
+
+@keyframes html {
+    to {
+        width: 90%;
+    }
+}
+
+.skill li.css::after {
+    animation-name: css;
+}
+
+@keyframes css {
+    to {
+        width: 80%;
+    }
+}
+
+.skill li.js::after {
+    animation-name: js;
+}
+
+@keyframes js {
+    to {
+        width: 70%;
+    }
+}
+
+.skill li.bs::after {
+    animation-name: bs;
+}
+
+@keyframes bs {
+    to {
+        width: 90%;
+    }
+}
 /* footer start */
 #footer {
     height: 100px;
